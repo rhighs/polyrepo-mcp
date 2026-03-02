@@ -1,0 +1,32 @@
+{
+  "name": "polyrepo-mcp",
+  "version": "0.1.0",
+  "description": "MCP server + workspace manifest tool for polyrepos",
+  "type": "module",
+  "bin": {
+    "polyrepo-mcp": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsx src/cli.ts",
+    "serve": "tsx src/cli.ts serve",
+    "index": "tsx src/cli.ts index .workspace.yaml",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.4",
+    "js-yaml": "^4.1.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.8.2",
+    "vitest": "^2.1.8"
+  }
+}
